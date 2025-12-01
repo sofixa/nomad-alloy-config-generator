@@ -83,6 +83,7 @@ job "grafana" {
       }
 
       # Output the generated targets to a file for the Alloy agent to consume
+      # passed inline for easier sharing, but this would be packaged as an artifact or bundled in a Docker container in prod
       template {
         destination = "local/generate-alloy-targets.py"
         change_mode = "restart"
